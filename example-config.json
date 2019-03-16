@@ -1,0 +1,47 @@
+{  
+   "inputVideo":"C:\\Users\\wben7\\Videos\\Microsoft CEA 3-2 Showmatch.mp4",
+   "outputVideo":"C:\\Users\\wben7\\Videos\\CEA 3-2 Showmatch Split.mp4",
+   "showSeriesScore": true,
+   "saveIndividualClips": true,
+   "padSeriesLength": 7,
+   "team1": "Clippy",
+   "team2": "Vista",
+   "clips":[  
+      {  
+         "start":"00:00:00",
+         "end":"00:09:46",
+         "winner":"Clippy",
+         "drawText": "Clippy - 0\nVista - 0"
+      },
+      {  
+         "start":"00:15:10",
+         "end":"00:23:00",
+         "winner":"Vista"
+      },
+      {  
+         "start":"00:25:47",
+         "end":"00:33:04",
+         "winner":"Vista"
+      },
+      {  
+         "start":"00:34:20",
+         "end":"00:40:58",
+         "winner":"Clippy"
+      },
+      {  
+         "start":"00:40:58",
+         "end":"00:47:46",
+         "winner":"Vista"
+      },
+      {  
+         "start":"00:47:46",
+         "end":"00:55:25",
+         "winner":"Clippy"
+      },
+      {  
+         "start":"00:55:25",
+         "end":"01:05:05",
+         "winner":"Clippy"
+      }
+   ]
+}
