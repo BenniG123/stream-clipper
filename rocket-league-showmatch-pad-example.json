@@ -1,0 +1,16 @@
+{  
+   "inputVideo":"G:\\Videos\\raw_stream.mp4",
+   "outputVideo":"G:\\Videos\\CEA 3-2 Showmatch.mp4",
+   "showSeriesScore": true,
+   "saveIndividualClips": true,
+   "padSeriesLength": 7,
+   "team1": "Clippy",
+   "team2": "Vista",
+   "clips":[  
+      {  
+         "start":"00:08:35",
+         "end":"00:18:10",
+         "winner":"Clippy"
+      }
+   ]
+}
