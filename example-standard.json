@@ -1,0 +1,28 @@
+{  
+   "inputVideo":"C:\\Users\\ben\\Videos\\example.mp4",
+   "outputVideo":"C:\\Users\\ben\\Videos\\output.mp4",
+   "saveIndividualClips": true,
+   "renderParallel": false,
+   "clips":[  
+      {  
+         "start":"00:01:32",
+         "end":"00:07:00",
+         "text":"Intense firefight!"
+      },
+      {  
+         "start":"00:09:32",
+         "end":"00:10:10",
+         "text":"Juked"
+      },
+      {  
+         "start":"00:25:25",
+         "end":"00:27:00",
+         "text":"360 noscope"
+      },
+      {  
+         "start":"00:42:35",
+         "end":"00:43:02",
+         "text":"Amazing headshot"
+      }
+   ]
+}

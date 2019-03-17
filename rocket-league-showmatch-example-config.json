@@ -2,7 +2,7 @@
    "inputVideo":"G:\\Videos\\raw_stream.mp4",
    "outputVideo":"G:\\Videos\\CEA 3-2 Showmatch.mp4",
    "showSeriesScore": true,
-   "saveIndividualClips": true,
+   "saveIndividualClips": false,
    "padSeriesLength": 7,
    "team1": "Clippy",
    "team2": "Vista",
@@ -10,8 +10,7 @@
       {  
          "start":"00:08:35",
          "end":"00:18:10",
-         "winner":"Clippy",
-         "drawText": "Clippy - 0\r\nVista - 0"
+         "winner":"Clippy"
       },
       {  
          "start":"00:23:27",
@@ -30,8 +29,13 @@
       },
       {  
          "start":"00:50:00",
-         "end":"01:03:25",
+         "end":"00:56:15",
          "winner":"Vista"
+      },
+      {  
+         "start":"00:56:30",
+         "end":"01:03:45",
+         "winner":"Clippy"
       },
       {  
          "start":"01:04:30",
