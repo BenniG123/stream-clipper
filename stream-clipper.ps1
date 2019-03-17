@@ -2,7 +2,6 @@ param (
     [Parameter(Mandatory=$false)]
     [string]$ConfigFile
 )
-
 function Get-FileName($initialDirectory)
 {
     [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
@@ -19,6 +18,12 @@ if (-not (Test-Path -Path $ConfigFile))
     {
         Write-Error "Couldn't find $ConfigFile"
     }
+}
+
+Write-Warning "This script tested with ffmpeg version 4.1.1"
+if (-not (Get-Command "ffmpeg.exe" -ErrorAction SilentlyContinue))
+{
+    Write-Error "Can't find ffmpeg.  Make sure the latest release is installed and added to your Path.  If you just did this, you may have to refresh your powershell window."
 }
 
 Write-Output "Parsing $ConfigFile"
@@ -40,6 +45,8 @@ $outputFileBaseName = $($config.outputVideo).split('\.')[-2]
 $team1Score = 0
 $team2Score = 0
 
+$clipCommand = ""
+
 foreach ($clip in $config.clips)
 {
     Write-Output $clip
@@ -49,19 +56,27 @@ foreach ($clip in $config.clips)
     # Append clip to list
     $clipFiles += $clipFilePath
 
-    # Clip and render text
-    if ($config.showSeriesScore)
+    # Build clip command
+    $clipCommand += " -ss $($clip.start) -to $($clip.end) -c copy $clipFileName"
+    $clipCounter += 1
+}
+
+# Export clips at one time to speed this up
+ffmpeg -i $config.inputVideo $clipCommand -y
+
+# Render text
+if ($config.showSeriesScore)
+{
+    foreach ($clipFile in $clipFiles)
     {
         # Overlay score
         # We overlay with score - team name.  That's just to align easily.
         # I'll happily take a fix for team name - score with alignment :)
         $text = "$team1Score - $($config.team1)`r`n$team2Score - $($config.team2)"
-        $textParams = "font=arial: text='$text': fontsize=36: fontcolor=white: x=(w-text_w)/16: y=(h-text_h)/16"
-        ffmpeg -i $config.inputVideo `
-               -ss $clip.start `
-               -to $clip.end `
-               -vf drawtext=$textParams `
-               -c copy $clipFilePath -y 
+        $textParams = "font=arial: text=`'$text`': fontsize=36: fontcolor=white: x=(w-text_w)/16: y=(h-text_h)/16"
+        ffmpeg -i $clipFile `
+            -vf drawtext=$textParams `
+            $clipFilePath -y 
 
         if ($clip.winner -eq $config.team1)
         {
@@ -76,14 +91,6 @@ foreach ($clip in $config.clips)
             Write-Warning "Winner $($clip.winner) wasn't a recognized team."
         }
     }
-    else
-    {
-        # Export clip
-        ffmpeg -i $config.inputVideo -ss $clip.start `
-            -to $clip.end -c copy $clipFilePath -y
-    }
-
-    $clipCounter += 1
 }
 
 $files = Get-ChildItem "$clipFolder\*" -Include *.mp4

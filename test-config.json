@@ -9,33 +9,33 @@
    "clips":[  
       {  
          "start":"00:08:35",
-         "end":"00:18:10",
+         "end":"00:08:45",
          "winner":"Clippy",
          "drawText": "Clippy - 0\r\nVista - 0"
       },
       {  
          "start":"00:23:27",
-         "end":"00:31:35",
+         "end":"00:23:35",
          "winner":"Vista"
       },
       {  
          "start":"00:34:13",
-         "end":"00:41:20",
+         "end":"00:34:30",
          "winner":"Vista"
       },
       {  
          "start":"00:42:35",
-         "end":"00:49:15",
+         "end":"00:42:50",
          "winner":"Clippy"
       },
       {  
          "start":"00:50:00",
-         "end":"01:03:25",
+         "end":"00:50:15",
          "winner":"Vista"
       },
       {  
          "start":"01:04:30",
-         "end":"01:12:30",
+         "end":"01:04:40",
          "winner":"Clippy"
       }
    ]
