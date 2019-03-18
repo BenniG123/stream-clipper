@@ -1,0 +1,53 @@
+{  
+   "inputVideo":"G:\\Videos\\raw_stream.mp4",
+   "outputVideo":"G:\\Videos\\CEA 3-2 Showmatch.mp4",
+   "showSeriesScore": true,
+   "saveIndividualClips": false,
+   "padSeriesLength": 7,
+   "team1": "Clippy",
+   "team2": "Vista",
+   "clips":[  
+      {  
+         "inputVideo":"C:\\Videos\\clip0.mp4",
+         "start":"00:00:00",
+         "end":"00:05:00",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip0.mp4",
+         "start":"00:06:00",
+         "end":"00:11:00",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip0.mp4",
+         "start":"00:12:15",
+         "end":"00:17:25",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip1.mp4",
+         "start":"00:00:00",
+         "end":"00:05:00",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip1.mp4",
+         "start":"00:00:00",
+         "end":"00:05:00",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip2.mp4",
+         "start":"00:00:00",
+         "end":"00:05:00",
+         "winner":"Clippy"
+      },
+      {
+         "inputVideo":"C:\\Videos\\clip3.mp4",
+         "start":"00:00:00",
+         "end":"00:05:00",
+         "winner":"Clippy"
+      }
+   ]
+}

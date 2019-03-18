@@ -39,10 +39,10 @@ $clipFolder = Split-Path -Path $config.outputVideo
 
 $clipCounter = 0
 
-# Store list of clip files
+# Store list of intermediate clip files
 $clipFiles = @()
 
-# Get base name assuming this is all normal
+# Get base name assuming this is a filename with no period (.) characters
 $outputFileBaseName = $($config.outputVideo).split('\.')[-2]
 
 # Track series scores
