@@ -22,7 +22,7 @@ To run the script with an example config file
 
 You may need to change your execution policy to run this unsigned script:
 ```powershell
-Set-Executionpolicy unrestricted
+Set-ExecutionPolicy unrestricted
 ```
 
 ## Making a config file
