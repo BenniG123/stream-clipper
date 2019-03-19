@@ -1,5 +1,5 @@
 # Stream Clipper
-**Stream Clipper** is a simple tool for condensing long gameplay videos. **Stream Clipper** takens in a gameplay video and json config file, and outputs an edited youtube-ready video file.  It was originally made for clipping and editing [Rocket League best-of-X show matches](#Rocket-League-Best-of-X-example).
+**Stream Clipper** is a simple tool for condensing long gameplay videos. It takes in a gameplay video and json config file, and outputs an edited youtube-ready video file.  It was originally made for clipping and editing [Rocket League best-of-X show matches](#Rocket-League-Best-of-X-example).
 
 ## Dependencies
 [ffmpeg](https://www.ffmpeg.org/download.html)
@@ -49,7 +49,9 @@ A clip should have "start" and "end" timestamp strings in the format of "hh:MM:s
 ```
 
 ### Rocket League Best-of-X example
-Stream Clipper will overlay the series score by setting "showSeriesScore" to true.  You must specify a "winner" for each clip.
+Overlay the series score by setting "showSeriesScore" to true.  You must specify a "winner" for each clip, which must match one of the two team names.
+
+If "padSeriesLength" is set, the script will append earlier matches to the end of the video if the series ends early.  This is done so the video length doesn't give away the winner partway through the series.
 
 Config file for a rocket league series:
 ```json
