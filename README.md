@@ -1,6 +1,8 @@
 # Stream Clipper
 **Stream Clipper** is a simple tool for condensing long gameplay videos. It takes in a gameplay video and json config file, and outputs an edited youtube-ready video.  The purpose is to speed up video editing when you want to cut out dead zones/overlay basic text.  It was originally made for clipping and editing [Rocket League best-of-X show matches](#Rocket-League-Best-of-X-example).
 
+[Example Edited Showmatch](https://www.youtube.com/watch?v=RvnMmhM_4_M&feature=youtu.be)
+
 ## Dependencies
 [ffmpeg](https://www.ffmpeg.org/download.html)
 
